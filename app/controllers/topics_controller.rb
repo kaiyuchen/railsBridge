@@ -67,7 +67,7 @@ def upvote
 end
 def downvote
   @topic = Topic.find(params[:id])
-  @topic.votes.delete
+  @topic.votes.first.delete
   redirect_to(topics_path)
 end
   private
